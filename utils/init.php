@@ -10,6 +10,7 @@ if(!empty($_POST)) {
 		fullname varchar(50),
 		email varchar(50),
 		password varchar(32),
+		token varchar(100),
 		created_at datetime,
 		updated_at datetime
 	)";
@@ -72,6 +73,7 @@ if(!empty($_POST)) {
 		id int primary key auto_increment,
 		user_id int references user (id),
 		title varchar(100),
+		picture varchar(200),
 		note varchar(500),
 		created_at datetime,
 		updated_at datetime

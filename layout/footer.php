@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../layout/footer.css">
 	<footer>
-		<div class="main-content" style="margin-top:30%;">
+		<div class="main-content">
 			<div class="left box">
 				<h2>VỀ CHÚNG TÔI </h2>
 				<div class="content">

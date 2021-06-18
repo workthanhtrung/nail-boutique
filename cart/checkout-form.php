@@ -8,27 +8,21 @@ if(!empty($_POST))	{
 	}
 
 	// || count($cart == 0) ->đoạn này đang lỗi ko chạy.
-	if ($cart == null) {
-		header('Location: ../admin/list-product.php');
-		die();
-	}
+	// if ($cart == null) {
+	// 	header('Location: ../admin/list-product.php');
+	// 	die();
+	// }
 
 	$fullname = getPost('fullname');
 	$address = getPost('address');
 	$phone_number = getPost('phone_number');
 	$note = getPost('note');
 	$orderdate = date('Y-m-d H:i:s');
-
-	// var_dump($fullname);
-	// var_dump($address);
-	// var_dump($phone_number);
-	// var_dump($note);
-	// var_dump($orderdate);
-	// die();
 	$created_at = $updated_at = date('Y-m-d H:i:s');
+	$userID = getPost('userID');
 
-	//add order
-	$sql = "insert into orders (order_date, address, phone_number, note, created_at, updated_at) values ('$orderdate', '$address', '$phone_number', '$note', '$created_at', '$updated_at')";
+	//thêm thông tin đơn hàng vào bảng orders  
+	$sql = "insert into orders (user_id, order_date, address, phone_number, note, created_at, updated_at) values ('$userID', '$orderdate', '$address', '$phone_number', '$note', '$created_at', '$updated_at')";
 	execute($sql);
 
 	//lấy ra id của bảng orders khi order_date = cái vừa add ở trên
@@ -60,8 +54,11 @@ if(!empty($_POST))	{
 				break;
 			}
 		}
+		$totalprice = $num * $item['price'];
+		$created_at = $updated_at = date('Y-m-d H:i:s');
 
-		$sql = "insert into order_details (order_id, product_id, quantity) values ($orderId, ".$item['id'].", $num)";
+		//nhập thông tin vào bảng order details 
+		$sql = "insert into order_details (order_id, product_id, quantity, total_price, created_at, updated_at) values ($orderId, ".$item['id'].", $num, '$totalprice', '$created_at', '$updated_at')";
 		execute($sql);
 	}
 	header('Location: complete.php');

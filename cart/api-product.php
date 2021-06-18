@@ -18,8 +18,12 @@ if(!empty($_POST)) {
 			for ($i=0; $i < count($cart); $i++) { 
 				if($cart[$i]['id'] == $id) {
 					$cart[$i]['num'] += $num;
+					if ($cart[$i]['num'] > 20) {
+						$cart[$i]['num'] = 20;
+					}
 					$isFind = true;
 					break;
+					
 				}
 			}
 

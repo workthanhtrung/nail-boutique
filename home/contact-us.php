@@ -1,6 +1,22 @@
 <?php
 	$title = "Nail | Contact-Us";
 	include_once('../layout/header.php');
+	require_once('contact-form.php');
+
+if (validateToken() == null) {
+	header('Location: ../user/login.php');
+	die();
+}
+
+//dùng token tìm thông tin user_id trong bảng user 
+$token = '';
+	if(isset($_COOKIE['token'])) {
+		$token = $_COOKIE['token'];
+		
+		$find_id = "select * from user where token = '$token'";
+		$user = executeResult($find_id, true);
+}
+//
 ?>
 <link rel="stylesheet" type="text/css" href="contact.css">
 	<div class="contact-warp">
@@ -25,12 +41,16 @@
 			</ul>
 		</div>
 		<div class="contact-in">
-			<h1 style="color: #000;">Send A Messege</h1>
-			<form method="post">
-				<input required="true" type="text" name="fullame" class="contact-in-input" placeholder="Họ và Tên">
-				<input required="true" type="email" name="email" class="contact-in-input" placeholder="Email">
+			<h1 style="color: #000;">Gửi phản hồi cho chúng tôi nhé !</h1>
+			<form method="post" enctype="multipart/form-data">
+				<div class="form-group" style="display:none;">
+				  <label for="userid">userid:</label>
+				  <input type="number" class="form-control" id="userID" name="userID" value="<?=$user['id']?>">
+				</div>
 				<input required="true" type="text" name="title" class="contact-in-input" placeholder="Tiêu Đề">
-				<textarea placeholder="Nôi Dung" required style="margin-top: 0px;" row="5" class="contact-in-textarea"></textarea>
+				<textarea placeholder="Nội Dung" required="true" style="margin-top: 0px;" row="5" class="contact-in-textarea" name="note"></textarea>
+				<input type="file" class="contact-in-input" id="picture" name="picture">
+				<!-- <img src=" mở thẻ php ($thisProduct != null)?$thisProduct['picture']:'' đóng thẻ " style="max-height: 200px;"> -->
 				<button class="contact-in-btn btn btn-outline-danger">Gửi</button>
 			</form>
 		</div>

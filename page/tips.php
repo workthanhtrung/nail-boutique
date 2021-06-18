@@ -1,7 +1,9 @@
 <?php
+$title = "Nail | Tips";
 include_once('../layout/header.php');
 ?>
-	<div class="container">
+ <link rel="stylesheet" type="text/css" href="style.css">
+	<div class="container" style="margin-top: 10%;">
 		<h1><span class="title">Tips</span></h1>
 		<div class="tip">
 			<ul>
@@ -22,7 +24,7 @@ include_once('../layout/header.php');
 						<p>
 							Có được những ngón tay lạ mắt với những thiết kế móng tay thời thượng này. Lần tới khi bạn chuẩn bị làm móng và bạn đang tìm kiếm nguồn cảm hứng, hãy xem các kiểu vẽ móng yêu thích của chúng tôi.
 						</p>
-						<a href="news 01.html" class="read">xem thêm</a>
+						<a href="../page/tips-detail-02.php" class="read">xem thêm</a>
 					</div>
 				</li>
 				<li>
@@ -30,9 +32,9 @@ include_once('../layout/header.php');
 					<div class="content-right">
 						<h3><span>Dành cho những cô nàng tinh nghịch</span></h3>
 						<p>
-							Bạn có thể tự làm ngay tại nhà chỉ trong vài bước. Hãy bắt đầu với một số thiết kế nghệ thuật móng tay dễ dàng. Chỉ với một ít dụng cụ và 5 bước sau đây.
+							Lo ngại trong mùa dịch? Bạn có thể tự làm ngay tại nhà chỉ trong vài bước. Hãy bắt đầu với một số thiết kế nghệ thuật móng tay dễ dàng. Chỉ với một ít dụng cụ và 5 bước sau đây.
 						</p>
-						<a href="news 01.html" class="read">xem thêm</a>
+						<a href="../page/tips-detail-03.php" class="read">xem thêm</a>
 					</div>
 				</li>
 				<li>
@@ -40,9 +42,9 @@ include_once('../layout/header.php');
 					<div class="content-right">
 						<h3><span>Những style cho mùa đông không nên bỏ lỡ</span></h3>
 						<p>
-							Những ngày Halloween và Xmas đang đến gần, và bạn có thể xuất hiện với những kiểu vẽ độc đáo. Các quý cô sẽ gây ấn tượng với bộ móng dài lộng lẫy và được trang trí bằng những thiết kế nổi bật trong mùa lễ hội này.
+							Những ngày Halloween và Xmas đang đến gần, cùng với những kiểu vẽ độc đáo. Các quý cô sẽ gây ấn tượng với bộ móng dài lộng lẫy và được trang trí bằng những thiết kế nổi bật trong mùa lễ hội này.
 						</p>
-						<a href="news 01.html" class="read">xem thêm</a>
+						<a href="../page/tips-detail-04.php" class="read">xem thêm</a>
 					</div>
 				</li>
 			</ul>

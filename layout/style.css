@@ -14,17 +14,16 @@
 }
 
 .heading ul li {
-	text-transform: bold;
 	margin-right: 30px;
 	padding-top: 17px;
 }
 
 .heading ul li a {
 	color: black;
-	font-weight: bold;
 	font-family: "Cambria";
-	font-size: 21px;
+	font-size: 19px;
 	text-transform: uppercase;
+	text-align: left;
 }
 
 h3 {
