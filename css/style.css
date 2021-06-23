@@ -1,0 +1,143 @@
+.tai{
+	padding: 5px;
+    width: auto;
+    border: navajowhite;
+}
+.len {
+	padding: 5px;
+    width: initial;
+    border: 1px solid;
+    height: 35px;
+}
+/*cho trang header*/
+.navbar .navbar-expand-lg{
+	position: fixed;
+ 	top: 0;
+ }
+.heading ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.heading ul li {
+	margin-right: 30px;
+	padding-top: 17px;
+
+}
+
+.heading ul li a {
+	color: black;
+	font-family: "Cambria";
+	font-size: 19px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+h3 span {
+	/*background: #252525;*/
+	display: block;
+	padding: 25px 80px 15px;
+	text-align: center;
+}
+
+/*cho trang tips*/
+.title	{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: white;
+	background-color: black;
+	margin-left: 36%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+div.tip ul li {
+	border: 2px solid #1a1a1a;
+	display: flex;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+div.tip ul li p {
+	margin-bottom: 100px;
+	text-align: justify;
+}
+
+.content-right{
+	display: block;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.picture {
+	border-right: 2px solid #252525;
+	/*margin: 0;
+	padding: 0;*/
+	width: 330px;
+	height: 380px;
+}
+
+.read	{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: white;
+	background-color: black;
+	margin-left: 37%;
+	padding: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.read:hover {
+	color: #252525;
+	background: #fff;
+	border: 2px solid #252525;
+	text-decoration: none;
+}
+
+form input, form textarea {
+	border: 2px solid #252525;
+	color: #252525;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-size: 20px;
+	font-weight: normal;
+	margin-bottom: 37px;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+/*cho trang gallery*/
+div.gallery {
+	display: flex;
+	width: 100%;
+}
+
+div.gallery img {
+	border: 2px solid #969696;
+	width: 100% !important;
+	height: 300px;
+	border-radius:5%;
+	object-fit: cover;
+}
+
+div.gallery img:hover {
+	border: 3px solid #1a1a1a;
+	opacity: .8;
+}
+
+div.gallery ul li {
+	list-style-type: none;
+	width: 30%;
+	float: left;
+	margin: 15px;
+}
